@@ -15,23 +15,24 @@ function woodCalculator(chair, table, khat){
 }
 
 //brickcalculator
-function brickCalculator(total_height,prev_height, num_of_bricks, floorNumber){
+function brickCalculator(floorNumber){
     if(floorNumber<=10){
-        total_height = floorNumber*15;
-        num_of_bricks = total_height*1000;
+        var total_height = floorNumber * 15;
+        var num_of_bricks = total_height * 1000;
     }
     else if(floorNumber<=20){
-        prev_height = 10*15;
-        total_height = prev_height + (floorNumber-10)*12;
-        num_of_bricks = total_height*1000;
+        var prev_height = 10 * 15;
+        var total_height = prev_height + (floorNumber-10)*12;
+        var num_of_bricks = total_height * 1000;
     }
     else{
-        prev_height = 10*15 + 10*12;
-        total_height = prev_height + (floorNumber-20)*10;
-        num_of_bricks = total_height*1000;
+        var prev_height = (10 * 15) + (10 * 12);
+        var total_height = prev_height + (floorNumber-20) * 10;
+        var num_of_bricks = total_height * 1000;
     }
     return num_of_bricks;
 }
+
 
 //tinyfriend
 
